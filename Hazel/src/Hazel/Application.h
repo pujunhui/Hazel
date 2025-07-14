@@ -1,21 +1,22 @@
 #pragma once
 
 #include "Core.h"
+#include "Events/Event.h"
 
 namespace Hazel {
 
-	class HAZEL_API Application
-	{
-	public:
-		Application();
-		virtual ~Application();
+    class HAZEL_API Application
+    {
+    public:
+        Application();
+        virtual ~Application();
 
-		void Run();
-	private:
+        void Run();
+    private:
 
-	};
+    };
 
-	// To be define 
-	Application* CreateApplication();
+    // To be define 
+    Application* CreateApplication();
 }
 
