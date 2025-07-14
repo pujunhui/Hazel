@@ -44,7 +44,7 @@ project "Hazel"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "Off"
+        staticruntime "On"
         systemversion "latest"
 
         defines {
@@ -62,14 +62,17 @@ project "Hazel"
     filter "configurations:Debug"
         defines "HZ_DEBUG"
         symbols "On"
+        buildoptions "/MDd"
         
     filter "configurations:Release"
         defines "HZ_RELEASE"
         optimize "On"
+        buildoptions "/MD"
 
     filter "configurations:Dist"
         defines "HZ_DIST"
         optimize "On"
+        buildoptions "/MD"
 
         
 project "Sandbox"
@@ -108,11 +111,14 @@ project "Sandbox"
     filter "configurations:Debug"
         defines "HZ_DEBUG"
         symbols "On"
+        buildoptions "/MDd"
 
     filter "configurations:Release"
         defines "HZ_RELEASE"
         optimize "On"
+        buildoptions "/MD"
 
     filter "configurations:Dist"
         defines "HZ_DIST"
         optimize "On"
+        buildoptions "/MD"
