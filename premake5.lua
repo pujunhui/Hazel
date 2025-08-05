@@ -58,7 +58,7 @@ project "Hazel"
         defines {
             "HZ_PLATFORM_WINDOWS",
             "HZ_BUILD_DLL",
-            "GLFW_INCLUDE_NONE"
+            "GLFW_INCLUDE_NONE" -- 不包含任何OpenGL/OpenGL ES头文件
         }
 
         buildoptions { "/utf-8" }
